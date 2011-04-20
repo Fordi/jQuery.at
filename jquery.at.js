@@ -19,7 +19,7 @@
 				if ((scroll = $document[scrollTop]()) > 0) {
 					browserIsRelative = (document[elementFromPoint](0, scroll + $window.height() - 1) == null);
 				} else if ((s = $document[scrollLeft]()) > 0) {
-					browserIsRelative = (document[elementFromPoint](s + $window.width() - 1, 0) == null);
+					browserIsRelative = (document[elementFromPoint](scroll + $window.width() - 1, 0) == null);
 				}
 				checked = (s > 0);
 			}
